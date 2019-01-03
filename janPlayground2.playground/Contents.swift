@@ -52,10 +52,14 @@ func countDown(N: Int) {
     while i > 0 {
         print(i)
         sleep(1)
-        i -= 1
+        i -= 2
     }
     
     print("go!")
 }
 
-countDown(N: 5)
+countDown(N: 10)
+
+
+
+var sumClosure: (Int, Int) -> Int = { x, y in return x + y }
