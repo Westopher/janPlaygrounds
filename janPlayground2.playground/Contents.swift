@@ -44,26 +44,26 @@ import Foundation
 //for i in 1...listOfNumbers3.count {
 //    print(listOfNumbers3[listOfNumbers3.count - i])
 //}
-
-
-func countDown(N: Int) {
-    var i = N
-    
-    while i > 0 {
-        print(i)
-        sleep(1)
-        i -= 2
-    }
-    
-    print("go!")
-}
-
-countDown(N: 10)
-
-var sumClosure: (Int, Int) -> Int = { x, y in return x + y }
-
-sumClosure(100, 100)
-
+//
+//
+//func countDown(N: Int) {
+//    var i = N
+//
+//    while i > 0 {
+//        print(i)
+//        sleep(1)
+//        i -= 2
+//    }
+//
+//    print("go!")
+//}
+//
+//countDown(N: 10)
+//
+//var sumClosure: (Int, Int) -> Int = { x, y in return x + y }
+//
+//sumClosure(100, 100)
+//
 
 
 class Circle {
@@ -81,3 +81,5 @@ class Circle {
 }
 
 
+var myCircle = Circle(x: 5, y: 10, radius: 20)
+myCircle.diameter
