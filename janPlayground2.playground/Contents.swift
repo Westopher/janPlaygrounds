@@ -46,7 +46,7 @@ import Foundation
 //}
 
 
-func countDown(_ N: Int) {
+func countDown(N: Int) {
     var i = N
     
     while i > 0 {
@@ -58,4 +58,4 @@ func countDown(_ N: Int) {
     print("go!")
 }
 
-countDown(5)
+countDown(N: 5)
