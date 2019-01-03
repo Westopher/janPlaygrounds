@@ -60,6 +60,24 @@ func countDown(N: Int) {
 
 countDown(N: 10)
 
-
-
 var sumClosure: (Int, Int) -> Int = { x, y in return x + y }
+
+sumClosure(100, 100)
+
+
+
+class Circle {
+    var x :Int, y: Int
+    var radius: Double
+    var diameter: Double {
+        return radius * 2
+    }
+    
+    init(x: Int, y: Int, radius: Double) {
+        self.x = x
+        self.y = y
+        self.radius = radius
+    }
+}
+
+
