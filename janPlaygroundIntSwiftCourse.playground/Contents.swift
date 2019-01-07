@@ -43,6 +43,7 @@ let name = NYCApartment.resident?.name
 let ChicagoApartment = Apartment()
 ChicagoApartment.resident?.name
 ChicagoApartment.resident = Human(name: "Lip")
+ChicagoApartment.resident?.sayHello()
 
 if let residentName = ChicagoApartment.resident?.name {
     print(residentName)
@@ -50,3 +51,15 @@ if let residentName = ChicagoApartment.resident?.name {
     print("No name available")
     }
 
+let iCanDrink = true
+
+func checkDrinkingAges() {
+    guard iCanDrink else {
+        print("You can't drink")
+        return
+    }
+    
+    print("Enjoy your night")
+}
+
+checkDrinkingAges()
