@@ -48,7 +48,7 @@ ChicagoApartment.resident = Human(name: "Lip")
 ChicagoApartment.resident?.sayHello()
 
 let sanFranApt = Apartment()
-sanFranApt.resident = Human(name: "Full House")
+sanFranApt.resident = Human(name: "Oeste")
 sanFranApt.resident?.sayHello()
 
 if let residentName = ChicagoApartment.resident?.name {
@@ -129,6 +129,7 @@ enum NameError: Error {
 
 class Course {
     var name: String
+    
     init(name: String) throws {
         if name == "" {
             throw NameError.noName
@@ -146,8 +147,32 @@ do {
 }
 
 
+class Person {
+    func introduce() {
+        print("Hi, I'm a human")
+    }
+}
+
+class Korean: Person {
+    func singGangNamStyle() {
+        print("Oppa Gangnam Style")
+    }
+}
+
+let Me = Korean()
+Me.introduce()
+Me.singGangNamStyle()
+
+//Typecasting
+let newMe = Me as Person
+newMe.introduce()
 
 
+//upcasting (this "Any" allows you to store different values in the same array, bools & strings for example)
+var nombre = "Wester" as Any
+var numero = 20 as Any
+
+var anyArray = [nombre, numero]
 
 
 
