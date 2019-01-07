@@ -92,7 +92,7 @@ checkDrinkingAges()
 
 //throws
 
-//error 1/3
+//error limits 1/3
 enum HeightError: Error {
     case maxHeight
     case minHeight
@@ -117,3 +117,40 @@ do {
 } catch HeightError.minHeight {
     print("You're too short")
 }
+
+
+
+//testing for a name
+
+// error limits
+enum NameError: Error {
+    case noName
+}
+
+class Course {
+    var name: String
+    init(name: String) throws {
+        if name == "" {
+            throw NameError.noName
+        } else {
+            self.name = name
+            print("you've created an object")
+        }
+    }
+}
+
+do {
+    let myCourse = try Course(name: "Math")
+} catch NameError.noName {
+    print("No name entered")
+}
+
+
+
+
+
+
+
+
+
+
