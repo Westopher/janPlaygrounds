@@ -84,3 +84,36 @@ func checkDrinkingAges() {
 }
 
 checkDrinkingAges()
+
+
+
+
+//DO TRY CATCH
+
+//throws
+
+//error 1/3
+enum HeightError: Error {
+    case maxHeight
+    case minHeight
+}
+
+//call function
+func checkHeightError(height: Int) throws {
+    if height > 200 {
+        throw HeightError.maxHeight
+    } else if height < 140 {
+        throw HeightError.minHeight
+    } else {
+        print("tall enough to ride")
+    }
+}
+
+//handle error with do try catch
+do {
+    try checkHeightError(height: 150)
+} catch HeightError.maxHeight {
+    print("You're too tall")
+} catch HeightError.minHeight {
+    print("You're too short")
+}
