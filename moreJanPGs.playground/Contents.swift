@@ -90,14 +90,22 @@ let bank = 50
 
 let howImFeelin = bank > 1000 ? "like a baws" : "kinda broke"
 
+//updating an array
+
+var atl = ["Future", "Tip", "Gucci", "Migos"]
+
+atl += ["Outcast", "Killer Mike"]
 
 
+func updateArray() {
+if let indexofGucc = atl.index(of: "Gucci") {
+   atl[indexofGucc] = "Guwop"
+} else {
+    print("no Gucci in array")
+}
+}
 
 
+updateArray()
 
-
-
-
-
-
-
+print(atl)
