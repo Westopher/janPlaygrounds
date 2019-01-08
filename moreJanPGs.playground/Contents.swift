@@ -116,5 +116,10 @@ var daysInTheGame = 0
 while cash < 1_000_000 {
     cash += cash
     daysInTheGame += 1
-    print("\(daysInTheGame) & $\(cash)")
+    print("\(daysInTheGame) days & $ \(cash)")
+    
+    if daysInTheGame == 7 {
+        print("You got locked up after -\(daysInTheGame)- days in the game")
+        break
+    }
 }
