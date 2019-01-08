@@ -130,3 +130,25 @@ let favorites = ["Kristy", "Eva", "Alies", "Corinna", "Maria", "Mistral"]
 for (index, lady) in favorites.enumerated() {
     print("\(index + 1). \(lady)")
 }
+
+
+//let lottaNumbers = 1.0...10000.0
+//
+//for number in lottaNumbers where number % 3.14 == 0 {
+//    print(number)
+//}
+
+let caller = "Joan"
+
+switch caller {
+case "Bruce":
+    print("pick up Dad")
+case "Joan":
+    print("pick up Mom")
+case "Sky":
+    print("pick up Sky")
+case "Kate":
+    print("pick up Kate")
+default:
+    print("pick up if not busy")
+}
