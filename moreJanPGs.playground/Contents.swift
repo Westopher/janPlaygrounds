@@ -109,3 +109,12 @@ if let indexofGucc = atl.index(of: "Gucci") {
 updateArray()
 
 print(atl)
+
+var cash = 1.0
+var daysInTheGame = 0
+
+while cash < 1_000_000 {
+    cash += cash
+    daysInTheGame += 1
+    print("\(daysInTheGame) & $\(cash)")
+}
