@@ -123,3 +123,10 @@ while cash < 1_000_000 {
         break
     }
 }
+
+
+let favorites = ["Kristy", "Eva", "Alies", "Corinna", "Maria", "Mistral"]
+
+for (index, lady) in favorites.enumerated() {
+    print("\(index + 1). \(lady)")
+}
