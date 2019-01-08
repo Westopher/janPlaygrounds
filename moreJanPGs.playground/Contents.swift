@@ -83,7 +83,12 @@ kush.half
 kush.zip = 200
 kush.eighth
 kush.half
+kush.quarter
 
+
+let bank = 50
+
+let howImFeelin = bank > 1000 ? "like a baws" : "kinda broke"
 
 
 
