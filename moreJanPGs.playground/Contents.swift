@@ -152,3 +152,17 @@ case "Kate":
 default:
     print("pick up if not busy")
 }
+
+//switch through range
+let time = 12
+
+switch time {
+case 1...7:
+    print("ealy morning")
+case 8...16:
+    print("daytime")
+case 17...21:
+    print("night")
+default:
+    print("late")
+}
