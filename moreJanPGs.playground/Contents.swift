@@ -179,12 +179,22 @@ enum FuckinError: Error {
     case fuckShit
 }
 
-let fortyString = "40"
-let fortyIntOptional = Int(fortyString)
+//let fortyString = "400"
+//let fortyIntOptional = Int(fortyString)
+//
+//guard let fortyInt = fortyIntOptional else {
+//    print("The Int optional was nil")
+//    throw FuckinError.fuckShit
+//}
+//
+//print(fortyInt)
 
-guard let fortyInt = fortyIntOptional else {
-    print("The Int optional was nil")
+
+let dictionary = ["Awesome":"David Bowie"]
+let rip = dictionary["Awesome"]
+guard let missYou = rip else {
+    print("David Bowie is not here")
     throw FuckinError.fuckShit
 }
 
-print(fortyInt)
+print(missYou)
