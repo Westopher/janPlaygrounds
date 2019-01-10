@@ -189,12 +189,15 @@ enum FuckinError: Error {
 //
 //print(fortyInt)
 
-
+//WITH GUARD LET YOU CAN USE THE VAIABLE THAT YOU CREATE AND UNWRAP ANYWHERE IN YOUR CODE. WITH IF THEN YOU CAN ONLY USE IT WITHIN THAT BLOCK.
 let dictionary = ["Awesome":"David Bowie"]
 let rip = dictionary["Awesome"]
-guard let missYou = rip else {
-    print("David Bowie is not here")
-    throw FuckinError.fuckShit
-}
 
-print(missYou)
+let goat = dictionary["Spam"] ?? "Freddie Mercury"
+
+//guard let missYou = rip else {
+//    print("David Bowie is not here")
+//    throw FuckinError.fuckShit
+//}
+//
+//print(missYou)
