@@ -201,3 +201,10 @@ let goat = dictionary["Spam"] ?? "Freddie Mercury"
 //}
 //
 //print(missYou)
+
+
+let gangsterName: String? = nil
+let name = gangsterName ?? "Clarence"
+print(name)
+
+
