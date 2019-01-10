@@ -19,3 +19,41 @@ func calcOrderPrice(pounds: Int, price: Int) -> Int {
 let totalCost = calcOrderPrice(pounds: poundsOfCookies, price: priceofCookies)
 
 print("The total cost is \(totalCost)")
+
+
+func lowerCase(name: String?) -> String {
+    guard let name = name else {
+        return "joe blow"
+    }
+    let lowerCasedName = name.lowercased()
+    return lowerCasedName
+}
+
+print(lowerCase(name: "West"))
+
+
+struct Dopeboy {
+    let govtName: String
+    var streetName: String
+    var isHustlin: Bool
+    
+    init(govt: String, street: String) {
+        self.govtName = govt
+        self.streetName = street
+        self.isHustlin = true
+    }
+    
+    func solicit() {
+        print("My name is \(streetName), would you like to buy something?")
+    }
+}
+
+let OJ = Dopeboy(govt: "West", street: "Kanye")
+OJ.govtName
+OJ.solicit()
+
+
+
+
+
+
