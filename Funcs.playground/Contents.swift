@@ -37,9 +37,9 @@ struct Dopeboy {
     var streetName: String
     var isHustlin: Bool
     
-    init(govt: String, street: String) {
-        self.govtName = govt
-        self.streetName = street
+    init(govtName: String, streetName: String) {
+        self.govtName = govtName
+        self.streetName = streetName
         self.isHustlin = true
     }
     
@@ -48,9 +48,10 @@ struct Dopeboy {
     }
 }
 
-let OJ = Dopeboy(govt: "West", street: "Kanye")
-OJ.govtName
-OJ.solicit()
+let Me = Dopeboy(govtName: "West", streetName: "Kanye")
+Me.govtName
+Me.solicit()
+Me.isHustlin
 
 
 
