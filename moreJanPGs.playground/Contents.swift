@@ -166,3 +166,25 @@ case 17...21:
 default:
     print("late")
 }
+
+var cellNumber: Int? = 5556667777
+if let newCellNum = cellNumber {
+    print("it's there")
+} else {
+    print("it's NOT there")
+}
+
+
+enum FuckinError: Error {
+    case fuckShit
+}
+
+let fortyString = "40"
+let fortyIntOptional = Int(fortyString)
+
+guard let fortyInt = fortyIntOptional else {
+    print("The Int optional was nil")
+    throw FuckinError.fuckShit
+}
+
+print(fortyInt)
