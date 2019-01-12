@@ -35,12 +35,11 @@ print(lowerCase(name: "West"))
 struct Dopeboy {
     let govtName: String
     var streetName: String
-    var isHustlin: Bool
+    var gramsOnHand: Int
+    var priceofGram: Int
     
-    init(govtName: String, streetName: String) {
-        self.govtName = govtName
-        self.streetName = streetName
-        self.isHustlin = true
+    var maxEarnings: Int {
+        return gramsOnHand * priceofGram
     }
     
     func solicit() {
@@ -48,10 +47,11 @@ struct Dopeboy {
     }
 }
 
-let Me = Dopeboy(govtName: "West", streetName: "Kanye")
+let Me = Dopeboy(govtName: "West", streetName: "Kanye", gramsOnHand: 50, priceofGram: 10)
 Me.govtName
 Me.solicit()
-Me.isHustlin
+Me.maxEarnings
+
 
 
 
