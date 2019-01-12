@@ -33,6 +33,11 @@ print(lowerCase(name: "West"))
 
 
 struct Dopeboy {
+    //only accessable by dopeboy, not by instences of the struct
+    static func lifeStatement() {
+        print("Ball out!")
+    }
+    
     let govtName: String
     var streetName: String
     var gramsOnHand: Int
@@ -64,6 +69,7 @@ Me.maxEarnings
 Me.sell(grams: 60)
 Me.gramsOnHand
 
+Dopeboy.lifeStatement()
 
 //Static properties are not accessable to an instance of the type, just the class or struct itself.
 struct BabyCreditCard {
