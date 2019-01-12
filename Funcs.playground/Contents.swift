@@ -87,8 +87,16 @@ struct BabyCreditCard {
 let babyVisa = BabyCreditCard()
 babyVisa.buyShitThatCosts(1_000)
 
+struct Equation {
+    let firstNumber: Int
+    let secondNumber: Int
+    func add() {
+        print(self.firstNumber + self.secondNumber)
+    }
+}
 
-
+var newEquation = Equation(firstNumber: 60, secondNumber: 40)
+newEquation.add()
 
 
 
