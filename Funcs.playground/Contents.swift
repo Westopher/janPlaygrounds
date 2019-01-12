@@ -118,3 +118,43 @@ class PersonClass {
 let thisIsMe = PersonClass(name: "Vestur")
 print(thisIsMe.name)
 
+
+
+class Hustla {
+    var name: String
+    init(name: String) {
+        self.name = name
+    }
+}
+
+var Kanye1 = Hustla(name: "Kanye")
+var Kanye2 = Kanye1
+Kanye1.name
+Kanye2.name
+
+//both change
+Kanye2.name = "Yeezy"
+Kanye2.name
+Kanye1.name
+
+struct SoccerTeam {
+    var name: String
+}
+
+var ManchesterUnited = SoccerTeam(name: "Manchester United")
+var Liverpool = ManchesterUnited
+ManchesterUnited.name
+Liverpool.name
+
+ManchesterUnited.name = "ManU"
+ManchesterUnited.name
+Liverpool.name
+
+
+
+
+
+
+
+
+
