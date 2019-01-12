@@ -99,6 +99,22 @@ var newEquation = Equation(firstNumber: 60, secondNumber: 40)
 newEquation.add()
 
 
+//Struct vs Class (you've got to initialize a class)
+struct PersonStruct {
+    let name: String
+}
+
+let Westopher = PersonStruct(name: "West")
+print(Westopher.name)
 
 
+class PersonClass {
+    let name: String
+    init(name: String) {
+        self.name = name
+    }
+}
+
+let thisIsMe = PersonClass(name: "Vestur")
+print(thisIsMe.name)
 
