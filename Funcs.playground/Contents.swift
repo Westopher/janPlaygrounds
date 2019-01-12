@@ -151,6 +151,34 @@ ManchesterUnited.name
 Liverpool.name
 
 
+class Person {
+    let govtName: String
+    
+    init(govtName: String) {
+        self.govtName = govtName
+    }
+    
+    func introSelf() {
+        print("Hi, I'm \(govtName)")
+    }
+}
+
+class Hustler: Person {
+    let bank: Int
+    init(govtName: String, bank: Int) {
+        self.bank = bank
+        super.init(govtName: govtName)
+    }
+    func hustlin() {
+        print("Everyday \(govtName) is hustlin. Also, I have \(bank) dollars on me.")
+    }
+}
+
+let Sky = Hustler(govtName: "Sky", bank: 100)
+Sky.govtName
+Sky.introSelf()
+Sky.hustlin()
+
 
 
 
