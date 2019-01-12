@@ -53,6 +53,23 @@ Me.solicit()
 Me.maxEarnings
 
 
+struct BabyCreditCard {
+    static let maxCharge = 200
+    
+    func buyShitThatCosts(_ price: Int) {
+        guard price < BabyCreditCard.maxCharge else {
+            print("Denied. Over the limit.")
+            return
+        }
+        print("Approved. Successful purchase.")
+    }
+}
+
+let babyVisa = BabyCreditCard()
+babyVisa.buyShitThatCosts(1_000)
+
+
+
 
 
 

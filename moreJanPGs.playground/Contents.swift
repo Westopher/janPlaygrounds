@@ -65,25 +65,26 @@ struct DopePrices {
     var half: Double
     var zip: Double {
         get {
-            return half * 2 - 20
+            return half + 50
         }
         set {
-            eighth = eighth / 2.0
-            quarter = quarter / 2.0
-            half = half / 2.0 + 10
+            eighth = eighth + 50
+            quarter = quarter + 50
+            half = half + 50
         }
     }
 }
 
 var kush = DopePrices(eighth: 100, quarter: 200, half: 400)
-kush.zip
-kush.eighth
-kush.half
 
-kush.zip = 200
+kush.zip = 100
 kush.eighth
-kush.half
-kush.quarter
+kush.zip
+
+
+
+
+
 
 
 let bank = 50
