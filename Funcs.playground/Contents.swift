@@ -48,7 +48,7 @@ struct Dopeboy {
     
     mutating func sell(grams: Int) {
         guard gramsOnHand >= grams else {
-            print("I don't have \() grams, so the deal can not go through.")
+            print("I don't have \(grams) grams on hand, so the deal can not go through.")
             return
         }
         gramsOnHand = gramsOnHand - grams
@@ -56,12 +56,13 @@ struct Dopeboy {
     }
 }
 
-let Me = Dopeboy(govtName: "West", streetName: "Kanye", gramsOnHand: 100, priceofGram: 10)
+var Me = Dopeboy(govtName: "West", streetName: "Kanye", gramsOnHand: 100, priceofGram: 10)
 Me.govtName
 Me.solicit()
 Me.maxEarnings
 
-
+Me.sell(grams: 60)
+Me.gramsOnHand
 
 
 //Static properties are not accessable to an instance of the type, just the class or struct itself.
