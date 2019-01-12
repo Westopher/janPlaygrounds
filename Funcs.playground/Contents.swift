@@ -179,7 +179,8 @@ Sky.govtName
 Sky.introSelf()
 Sky.hustlin()
 
-
+let Skyler = Person(govtName: "Skyler")
+Skyler.introSelf()
 
 
 
