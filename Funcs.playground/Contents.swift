@@ -45,14 +45,26 @@ struct Dopeboy {
     func solicit() {
         print("My name is \(streetName), would you like to buy something?")
     }
+    
+    mutating func sell(grams: Int) {
+        guard gramsOnHand >= grams else {
+            print("I don't have \() grams, so the deal can not go through.")
+            return
+        }
+        gramsOnHand = gramsOnHand - grams
+        print("I have successfully sold \(grams) and now I have \(gramsOnHand) grams left.")
+    }
 }
 
-let Me = Dopeboy(govtName: "West", streetName: "Kanye", gramsOnHand: 50, priceofGram: 10)
+let Me = Dopeboy(govtName: "West", streetName: "Kanye", gramsOnHand: 100, priceofGram: 10)
 Me.govtName
 Me.solicit()
 Me.maxEarnings
 
 
+
+
+//Static properties are not accessable to an instance of the type, just the class or struct itself.
 struct BabyCreditCard {
     static let maxCharge = 200
     
