@@ -122,6 +122,13 @@ import UIKit
 
 //nested types
 
+enum AddressType : String, Decodable {
+    case apartment = "apartment"
+    case house = "house"
+    case condo = "condo"
+    case townHouse = "townHouse"
+}
+
 struct Geo: Decodable {
     var latitude: Double
     var longitude: Double
@@ -132,6 +139,8 @@ struct Address: Decodable {
     var city: String
     var state: String
     var geo: Geo
+    var AddressType: AddressType
+    
 }
 
 struct Customer: Decodable {
@@ -159,7 +168,8 @@ let jsonInfo = """
                 "geo" : {
                     "latitude" : 34.56,
                     "longitude" : 35.65
-                }
+                },
+                "addressType" : "house"
             }
         }
     
