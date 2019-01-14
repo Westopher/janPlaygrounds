@@ -139,8 +139,7 @@ struct Address: Decodable {
     var city: String
     var state: String
     var geo: Geo
-    var AddressType: AddressType
-    
+    var addressType: AddressType
 }
 
 struct Customer: Decodable {
@@ -169,7 +168,7 @@ let jsonInfo = """
                     "latitude" : 34.56,
                     "longitude" : 35.65
                 },
-                "addressType" : "house"
+                "addressType" : "condo"
             }
         }
     
@@ -180,4 +179,4 @@ let jsonInfo = """
 """.data(using: .utf8)!
 
 let customerResponseJSON = try! JSONDecoder().decode(CustomerResponse.self, from: jsonInfo)
-print(customerResponseJSON.customers[0].address.geo.latitude)
+print(customerResponseJSON.customers[0].address.addressType)
