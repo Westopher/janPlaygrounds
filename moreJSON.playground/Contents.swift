@@ -1,16 +1,16 @@
 import UIKit
 
 
-func swapTwoInts(_ a: inout Int, _ b: inout Int) {
-    let temporaryA = a
+func swapTwoValues<T>(_ a: inout T, _ b: inout T) {
+    let z = a
     a = b
-    b = temporaryA
+    b = z
 }
 
 
-var someInt = 3
-var anotherInt = 107
-swapTwoInts(&someInt, &anotherInt)
+var someInt = "hello"
+var anotherInt = "world"
+swapTwoValues(&someInt, &anotherInt)
 print("someInt is now \(someInt), and anotherInt is now \(anotherInt)")
 
 
