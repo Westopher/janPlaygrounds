@@ -19,13 +19,13 @@ let favoritePeople = ["Michael Jordan", "Lebron James", "Patrick Ewing", "Shaq",
 let favoriteNumbers = [3, 5, 6, 7, 186]
 
 //so, you don't know what kind of array it's going to be. It could be double, string, or set
-func printElement<Generic>(array: [Generic]) {
-    for i in array {
+func printElement<Generic>(_ unknownArray: [Generic]) {
+    for i in unknownArray {
         print(i)
     }
 }
 
-printElement(array: favoritePeople)
+printElement(favoritePeople)
 
 
 
