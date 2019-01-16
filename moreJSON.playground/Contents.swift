@@ -26,6 +26,7 @@ func printElement<Generic>(_ unknownArray: [Generic]) {
 }
 
 printElement(favoritePeople)
+printElement(highSchoolGPA)
 
 
 
