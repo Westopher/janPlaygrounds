@@ -1,11 +1,9 @@
 import UIKit
 import PlaygroundSupport
 
+let url = URL(string: "https://jsonplaceholder.typicode.com/users")
 
-
-let url = URL(string: "https://jsonplaceholder.typicode.com/users")!
-
-URLSession.shared.dataTask(with: url) { data, response, error in
+URLSession.shared.dataTask(with: url!) { data, response, error in
     
     guard error == nil,
     let data = data else {
