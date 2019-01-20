@@ -18,8 +18,15 @@ struct Address: Decodable {
 }
 
 struct Geo: Decodable {
-    let lat: String
-    let lng: String
+    
+    let latitude: String
+    let longitude: String
+    
+    private enum CodingKeys: String, CodingKey {
+        case latitude = "lat"
+        case longitude = "lng"
+    }
+
 }
 
 
@@ -38,7 +45,7 @@ URLSession.shared.dataTask(with: url!) { data, response, error in
     if let users = users {
         print(users[0].email)
         print(users[0].address)
-        print(users[0].address.geo.lat)
+        print(users[0].address.geo.latitude)
     }
     
     
