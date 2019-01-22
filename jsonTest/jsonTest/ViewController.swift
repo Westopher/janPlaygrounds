@@ -45,13 +45,21 @@ class ViewController: UIViewController {
         
         let url = URL(string: "https://newsapi.org/v2/top-headlines?country=us&apiKey=5ca10b2d20a545099a108a3aeceb329c")
         
+        URLSession.shared.dataTask(with: url!) { data, response, error in
+        guard error == nil,
+            let data = data else {
+                print(error)
+                return
+        }
+            
+        let jsonDescription = try? JSONDecoder().decode(JSONDescription.self, from: data)
         
-        
-        
-        
+            print(jsonDescription?.articles.author)
+            
         
     }
 
 
 }
 
+}
