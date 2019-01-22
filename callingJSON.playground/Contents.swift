@@ -44,8 +44,8 @@ URLSession.shared.dataTask(with: url!) { data, response, error in
     let users = try? JSONDecoder().decode([User].self, from: data)
     if let users = users {
         print(users[0].email)
-        print(users[0].address)
-        print(users[0].address.geo.latitude)
+        print(users[0].address.street)
+        print(users[0].address.geo)
     }
     
     
