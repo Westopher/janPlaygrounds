@@ -39,7 +39,7 @@ class ViewController: UIViewController {
         struct JSONDescription: Decodable {
             var status: String
             var totalResults: Int
-            var articles: Articles
+            var articles: [Articles]
         }
         
         
@@ -50,12 +50,12 @@ class ViewController: UIViewController {
         
             guard let data = data else { return }
             
-            let dataAsString = String(data: data, encoding: .utf8)
+            //let dataAsString = String(data: data, encoding: .utf8)
 //            print(dataAsString)
 
             do {
-            let jsonDescription = try? JSONDecoder().decode(JSONDescription.self, from: data)
-                print(jsonDescription?.status)
+                let jsonDescription = try JSONDecoder().decode([Int:[JSONDescription]].self, from: data)
+                print(jsonDescription)
             }
             catch let jsonError {
                 print("Json Error:", jsonError)
