@@ -57,7 +57,7 @@ class ViewController: UIViewController {
             print(jsonDescription?.articles.author)
             
         
-    }
+    }.resume()
 
 
 }
