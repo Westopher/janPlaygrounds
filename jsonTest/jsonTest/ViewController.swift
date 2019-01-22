@@ -51,14 +51,21 @@ class ViewController: UIViewController {
             guard let data = data else { return }
             
             let dataAsString = String(data: data, encoding: .utf8)
-            print(dataAsString)
+//            print(dataAsString)
 
+            do {
+            let jsonDescription = try? JSONDecoder().decode(JSONDescription.self, from: data)
+                print(jsonDescription?.status)
+            }
+            catch let jsonError {
+                print("Json Error:", jsonError)
+            }
 }.resume()
 }
 }
 
 
-//        let jsonDescription = try? JSONDecoder().decode(JSONDescription.self, from: data)
+//
 //
 //        print(jsonDescription?.totalResults)
 //
