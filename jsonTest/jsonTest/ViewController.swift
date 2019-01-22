@@ -55,7 +55,7 @@ class ViewController: UIViewController {
 
             do {
                 let jsonDescription = try JSONDecoder().decode(JSONDescription.self, from: data)
-                print(jsonDescription.articles?[0].author)
+                print(jsonDescription.totalResults)
             }
             catch let jsonError {
                 print("Json Error:", jsonError)
