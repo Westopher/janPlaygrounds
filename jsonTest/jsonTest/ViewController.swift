@@ -20,26 +20,26 @@ class ViewController: UIViewController {
         // model
         
         struct Source: Decodable {
-            var id: String
-            var name: String
+            var id: String?
+            var name: String?
         }
         
         struct Articles: Decodable {
-            var source: Source
-            var author: String
-            var title: String
-            var description: String
-            var url: String
-            var urlToImage: String
-            var publishedAt: String
-            var content: String
+            var source: Source?
+            var author: String?
+            var title: String?
+            var description: String?
+            var url: String?
+            var urlToImage: String?
+            var publishedAt: String?
+            var content: String?
             
         }
         
         struct JSONDescription: Decodable {
-            var status: String
-            var totalResults: Int
-            var articles: [Articles]
+            var status: String?
+            var totalResults: Int?
+            var articles: [Articles]?
         }
         
         
@@ -54,8 +54,8 @@ class ViewController: UIViewController {
 //            print(dataAsString)
 
             do {
-                let jsonDescription = try JSONDecoder().decode([Int:[JSONDescription]].self, from: data)
-                print(jsonDescription)
+                let jsonDescription = try JSONDecoder().decode(JSONDescription.self, from: data)
+                print(jsonDescription.articles?[0].author)
             }
             catch let jsonError {
                 print("Json Error:", jsonError)
