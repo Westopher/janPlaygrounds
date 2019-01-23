@@ -50,12 +50,12 @@ class ViewController: UIViewController {
         
             guard let data = data else { return }
             
-            //let dataAsString = String(data: data, encoding: .utf8)
-//            print(dataAsString)
+//          let dataAsString = String(data: data, encoding: .utf8)
+//          print(dataAsString)
 
             do {
                 let jsonDescription = try JSONDecoder().decode(JSONDescription.self, from: data)
-                print(jsonDescription.totalResults)
+                print(jsonDescription.articles?[3].source?.name)
             }
             catch let jsonError {
                 print("Json Error:", jsonError)
@@ -63,12 +63,6 @@ class ViewController: UIViewController {
 }.resume()
 }
 }
-
-
-//
-//
-//        print(jsonDescription?.totalResults)
-//
 
 
     
