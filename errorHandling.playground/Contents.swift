@@ -78,3 +78,5 @@ fruit.peach
 fruit.banana
 
 fruit.banana = 100
+fruit.orange
+fruit.banana
