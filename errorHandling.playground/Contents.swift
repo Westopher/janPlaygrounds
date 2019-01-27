@@ -80,3 +80,28 @@ fruit.banana
 fruit.banana = 100
 fruit.orange
 fruit.banana
+
+
+var myGrade: Int = 80 {
+    willSet(newGrade) {
+        print("change to \(newGrade)")
+    }
+    didSet(oldGrade) {
+        print("Your old grade was \(oldGrade), your new grade is \(myGrade)")
+    }
+}
+
+
+myGrade = 100
+
+
+
+
+
+
+
+
+
+
+
+

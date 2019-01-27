@@ -50,8 +50,6 @@ class ViewController: UIViewController {
         
             guard let data = data else { return }
             
-//          let dataAsString = String(data: data, encoding: .utf8)
-//          print(dataAsString)
 
             do {
                 let jsonDescription = try JSONDecoder().decode(JSONDescription.self, from: data)
@@ -66,4 +64,4 @@ class ViewController: UIViewController {
 
 
     
-
+{dictionary: "key"}
