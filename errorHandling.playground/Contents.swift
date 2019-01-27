@@ -105,6 +105,24 @@ var totalSteps: Int = 20 {
 }
 
 totalSteps = 19
+totalSteps
+
+
+var isUserLoggedIn: Bool = false {
+    willSet(newValue) {
+        print("the user has done something")
+    }
+    didSet {
+        if isUserLoggedIn == true {
+            print("the user has switched from \(oldValue) to \(isUserLoggedIn)")
+        }
+    }
+}
+
+isUserLoggedIn = true
+isUserLoggedIn = false
+isUserLoggedIn = false
+isUserLoggedIn = true
 
 
 
