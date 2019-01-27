@@ -91,11 +91,20 @@ var myGrade: Int = 80 {
     }
 }
 
-
 myGrade = 100
 
+var totalSteps: Int = 20 {
+    willSet(newTotalSteps) {
+        print("about to set total steps to \(newTotalSteps)")
+    }
+    didSet(oldTotalSteps) {
+        if totalSteps > oldTotalSteps {
+            print("added \(totalSteps - oldTotalSteps) steps")
+        }
+    }
+}
 
-
+totalSteps = 19
 
 
 
