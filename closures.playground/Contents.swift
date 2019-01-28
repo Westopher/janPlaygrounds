@@ -29,3 +29,6 @@ func returnClosureInFunction() -> ((Int, Int) -> Int) {
 }
 let closure = returnClosureInFunction()
 closure(10,10)
+
+let ex = Array(1...100).filter { $0 % 2 == 0 }
+print(ex)
