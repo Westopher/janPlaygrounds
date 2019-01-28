@@ -24,7 +24,7 @@ returnedClosure(10,10)
 
 func returnClosureInFunction() -> ((Int, Int) -> Int) {
     return {
-        (number1, number2) in number1 + number2
+        $0 + $1
     }
 }
 let closure = returnClosureInFunction()
