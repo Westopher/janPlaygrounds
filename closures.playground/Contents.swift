@@ -32,3 +32,23 @@ closure(10,10)
 
 let ex = Array(1...100).filter { $0 % 2 == 0 }
 print(ex)
+
+
+//completion handlers
+
+let firstVC = UIViewController()
+let nextVC = UIViewController()
+
+firstVC.present(nextVC, animated: true, completion: { print("done") } )
+
+
+
+
+
+
+
+
+
+
+
+
