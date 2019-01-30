@@ -23,6 +23,11 @@ struct American: Humanable {
     }
 }
 
+func OOP() {
+    print("the heck with protocols... oop4lyfe")
+}
+
+OOP()
 
 
 
