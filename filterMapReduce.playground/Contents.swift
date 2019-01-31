@@ -21,13 +21,22 @@ func funcToSaveTime(elements: [Int]) -> Int {
 
 funcToSaveTime(elements: [15,15])
 
-
+//filter
 let zeroToHundArr = Array(1...100)
 print(zeroToHundArr.filter { $0 % 2 == 0 }.filter { $0 <= 50 })
 
+let zeroToHundArrayFiltered = zeroToHundArr.filter { $0 % 2 == 0 }.filter { $0 <= 50 }
+zeroToHundArrayFiltered
 
 
+//map
+var numbersArray = [5, 14, 22, 31, 93, 88]
 
+numbersArray.map { $0 * 2 }
+print(numbersArray.map { $0 * 2 })
+
+var mappedNumbersArray = numbersArray.map { $0 * 2 }
+print(mappedNumbersArray)
 
 
 
